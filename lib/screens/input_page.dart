@@ -204,14 +204,13 @@ class _InputPageState extends State<InputPage> {
             onTap: () {
               CalculatorBrain calc =
                   CalculatorBrain(height: height, weight: weight);
-              Navigator.push(
+              Navigator.pushNamed(
                 context,
-                MaterialPageRoute(
-                  builder: (context) => ResultsPage(
-                        bmiResult: calc.calculatorBMI(),
-                        resultText: calc.getResult(),
-                        interpretation: calc.getInterpretation(),
-                      ),
+                ResultsPage.routeName,
+                arguments: ResultsPage(
+                  bmiResult: calc.calculatorBMI(),
+                  resultText: calc.getResult(),
+                  interpretation: calc.getInterpretation(),
                 ),
               );
             },

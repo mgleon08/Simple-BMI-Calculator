@@ -4,6 +4,8 @@ import 'package:bmi_calculator/constants.dart';
 import 'package:bmi_calculator/components/bottom_button.dart';
 
 class ResultsPage extends StatelessWidget {
+  static const routeName = '/results_page';
+
   ResultsPage({
     @required this.bmiResult,
     @required this.resultText,
